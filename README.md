@@ -15,4 +15,4 @@ Papers:
 * [Importance of copying mechanism for news headline generation](https://arxiv.org/abs/1904.11475)
 * [Improving part-of-speech tagging via multi-task learning and character-level word representations](https://arxiv.org/abs/1807.00818)
 
-How to reach me: @YallenGusev at Telegram
+How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram
