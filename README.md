@@ -6,7 +6,7 @@ Projects:
 * [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
 * [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
 * [summarus, models for abstractive and extractive summarization](https://github.com/IlyaGusev/summarus)
-* [rnnmorph, morphological analyzer (POS tagger) for Russian](https://github.com/IlyaGusev/rnnmorph)
+* [rnnmorph, morphological analyzer for Russian](https://github.com/IlyaGusev/rnnmorph)
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
