@@ -1,16 +1,16 @@
-### Hi there 👋
+My name is Ilya Gusev. I'm currently working at Yandex and doing a PhD thresis on text summarization at MIPT.
 
-<!--
-**IlyaGusev/IlyaGusev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Projects:
+* [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
+* [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
+* [summarus, models for abstractive and extractive summarization](https://github.com/IlyaGusev/summarus)
+* [rnnmorph, morphological analyzer (POS tagger) for Russian](https://github.com/IlyaGusev/rnnmorph)
+* [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
-Here are some ideas to get you started:
+Papers:
+* [Advances of Transformer-Based Models for News Headline Generation](https://arxiv.org/abs/2007.05044)
+* [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063)
+* [Importance of copying mechanism for news headline generation](https://arxiv.org/abs/1904.11475)
+* [Improving part-of-speech tagging via multi-task learning and character-level word representations](https://arxiv.org/abs/1807.00818)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+How to reach me: @YallenGusev at Telegram
