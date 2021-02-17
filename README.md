@@ -1,4 +1,4 @@
-My name is Ilya Gusev. I'm currently working at Yandex and doing a PhD thesis on text summarization at MIPT.
+Hi! My name is Ilya Gusev. I'm currently working at Yandex and doing a PhD thesis on text summarization at MIPT.
 
 Currently, I'm interested in text generation, but looking forward to learning more about reinforcement learning, text-to-speech, and other fascinating stuff.
 
