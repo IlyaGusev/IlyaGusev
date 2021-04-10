@@ -4,6 +4,7 @@ Currently, I'm interested in text generation, but looking forward to learning mo
 
 Projects:
 * [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
+* [aika, amateur level chess engine](https://github.com/IlyaGusev/aika)
 * [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
 * [summarus, models for abstractive and extractive summarization](https://github.com/IlyaGusev/summarus)
 * [rnnmorph, morphological analyzer for Russian](https://github.com/IlyaGusev/rnnmorph)
