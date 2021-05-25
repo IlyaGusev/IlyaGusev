@@ -18,6 +18,7 @@ Articles:
 * [habr, Как научить свою нейросеть генерировать стихи](https://habr.com/ru/post/334046/)
 
 Papers:
+* [Russian News Clustering and Headline Selection Shared Task](https://arxiv.org/abs/2105.00981)
 * [Advances of Transformer-Based Models for News Headline Generation](https://arxiv.org/abs/2007.05044)
 * [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063)
 * [Importance of copying mechanism for news headline generation](https://arxiv.org/abs/1904.11475)
