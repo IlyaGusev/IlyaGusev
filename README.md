@@ -18,9 +18,10 @@ Articles:
 * [habr, Как научить свою нейросеть генерировать стихи](https://habr.com/ru/post/334046/)
 
 Papers:
-* [Russian News Clustering and Headline Selection Shared Task](https://arxiv.org/abs/2105.00981)
+* [HeadlineCause: A Dataset of News Headlines for Detecting Casualties](https://github.com/IlyaGusev/HeadlineCause)
+* [Russian News Clustering and Headline Selection Shared Task](https://arxiv.org/abs/2105.00981), [repo](https://github.com/dialogue-evaluation/Russian-News-Clustering-and-Headline-Generation)
 * [Advances of Transformer-Based Models for News Headline Generation](https://arxiv.org/abs/2007.05044)
-* [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063)
+* [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063), [repo](https://github.com/IlyaGusev/gazeta)
 * [Importance of copying mechanism for news headline generation](https://arxiv.org/abs/1904.11475)
 * [Improving part-of-speech tagging via multi-task learning and character-level word representations](https://arxiv.org/abs/1807.00818)
 
