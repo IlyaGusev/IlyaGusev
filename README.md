@@ -26,3 +26,8 @@ Papers:
 * [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063), [repo](https://github.com/IlyaGusev/gazeta)
 * [Importance of copying mechanism for news headline generation](https://arxiv.org/abs/1904.11475)
 * [Improving part-of-speech tagging via multi-task learning and character-level word representations](https://arxiv.org/abs/1807.00818)
+
+Links:
+* Google Scholar: [link](https://scholar.google.com/citations?user=1tSFoVQAAAAJ&hl=ru)
+* Orchid ID: [0000-0002-8930-729X](https://orcid.org/0000-0002-8930-729X)
+
