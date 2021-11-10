@@ -14,13 +14,14 @@ Projects:
 
 Articles:
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
+* [habr, Извлекаем суть новости. Опыт Яндекса](https://habr.com/ru/company/yandex/blog/586634/)
 * [habr, Новостной агрегатор за две недели](https://habr.com/ru/post/487324/)
 * [habr, Как научить свою нейросеть анализировать морфологию](https://habr.com/ru/post/339954/)
 * [youtube, Как научить нейросеть генерировать стихи](https://www.youtube.com/watch?v=wTN-qKPu4c0)
 * [habr, Как научить свою нейросеть генерировать стихи](https://habr.com/ru/post/334046/)
 
 Papers:
-* [HeadlineCause: A Dataset of News Headlines for Detecting Causalities](https://github.com/IlyaGusev/HeadlineCause)
+* [HeadlineCause: A Dataset of News Headlines for Detecting Causalities](https://arxiv.org/abs/2108.12626), [repo](https://github.com/IlyaGusev/HeadlineCause)
 * [Russian News Clustering and Headline Selection Shared Task](https://arxiv.org/abs/2105.00981), [repo](https://github.com/dialogue-evaluation/Russian-News-Clustering-and-Headline-Generation)
 * [Advances of Transformer-Based Models for News Headline Generation](https://arxiv.org/abs/2007.05044)
 * [Dataset for Automatic Summarization of Russian News](https://arxiv.org/abs/2006.11063), [repo](https://github.com/IlyaGusev/gazeta)
