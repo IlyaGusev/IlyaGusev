@@ -14,6 +14,7 @@ Projects:
 
 Articles:
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
+* [habr, Цикл про автоматическое реферирование](https://habr.com/ru/post/595517/)
 * [habr, Извлекаем суть новости. Опыт Яндекса](https://habr.com/ru/company/yandex/blog/586634/)
 * [habr, Новостной агрегатор за две недели](https://habr.com/ru/post/487324/)
 * [habr, Как научить свою нейросеть анализировать морфологию](https://habr.com/ru/post/339954/)
