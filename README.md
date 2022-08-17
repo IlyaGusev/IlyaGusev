@@ -1,6 +1,6 @@
-Hi! My name is Ilya Gusev. I'm currently working at Yandex and doing a PhD thesis on text summarization at MIPT.
+Hi! My name is Ilya Gusev.
 
-I am interested in text generation but looking forward to learning more about reinforcement learning, text-to-speech, and other fascinating things. If you need help with any of my projects or you would like to collaborate, do not hesitate to contact me.
+I am interested in text generation, looking forward to learning more about reinforcement learning, text-to-speech, and other fascinating things. If you need help with any of my projects or you would like to collaborate, do not hesitate to contact me.
 
 How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram
 
