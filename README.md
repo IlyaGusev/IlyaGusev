@@ -13,6 +13,7 @@ Projects:
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
+* [telegraph, Beyond OpenAI CLIP](https://telegra.ph/Beyond-OpenAI-CLIP-11-27)
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
 * [habr, Цикл про автоматическое реферирование](https://habr.com/ru/post/595517/)
 * [habr, Извлекаем суть новости. Опыт Яндекса](https://habr.com/ru/company/yandex/blog/586634/)
