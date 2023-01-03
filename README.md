@@ -10,9 +10,12 @@ Projects:
 * [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
 * [summarus, models for abstractive and extractive summarization](https://github.com/IlyaGusev/summarus)
 * [rnnmorph, morphological analyzer for Russian](https://github.com/IlyaGusev/rnnmorph)
+* [russ, library for Russian word stress detection](https://github.com/IlyaGusev/russ/)
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
+* [medium, Poems, Flowers, and Dragons at EMNLP 2022](https://towardsdatascience.com/poems-flowers-and-dragons-at-emnlp-2022-e83dbb0e91db)
+* [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
 * [notion, Beyond OpenAI CLIP](https://ilyagusev.notion.site/Beyond-OpenAI-CLIP-b43ee54bf7974145a4b014dae04bb12e)
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
 * [habr, Цикл про автоматическое реферирование](https://habr.com/ru/post/595517/)
