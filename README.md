@@ -14,10 +14,10 @@ Projects:
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
+* [notion, Yet another language model?](https://ilyagusev.notion.site/Yet-another-language-model-3309a42bcea2418cbff11e7764452ae2)
 * [medium, Poems, Flowers, and Dragons at EMNLP 2022](https://towardsdatascience.com/poems-flowers-and-dragons-at-emnlp-2022-e83dbb0e91db)
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
 * [notion, Beyond OpenAI CLIP](https://ilyagusev.notion.site/Beyond-OpenAI-CLIP-b43ee54bf7974145a4b014dae04bb12e)
-* [notion, Yet another language model?](https://ilyagusev.notion.site/Yet-another-language-model-3309a42bcea2418cbff11e7764452ae2)
 * [habr, Цикл про автоматическое реферирование](https://habr.com/ru/post/595517/)
 * [habr, Извлекаем суть новости. Опыт Яндекса](https://habr.com/ru/company/yandex/blog/586634/)
 * [habr, Новостной агрегатор за две недели](https://habr.com/ru/post/487324/)
