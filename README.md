@@ -14,6 +14,7 @@ Projects:
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
+* [habr, О «раздутом пузыре» нейросетей](https://habr.com/ru/post/718996/)
 * [notion, Yet another language model?](https://ilyagusev.notion.site/Yet-another-language-model-3309a42bcea2418cbff11e7764452ae2)
 * [medium, Poems, Flowers, and Dragons at EMNLP 2022](https://towardsdatascience.com/poems-flowers-and-dragons-at-emnlp-2022-e83dbb0e91db)
 * [medium, News Aggregator in 2 weeks](https://towardsdatascience.com/news-aggregator-in-2-weeks-5b38783b95e3)
