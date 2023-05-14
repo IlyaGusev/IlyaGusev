@@ -5,6 +5,7 @@ I am interested in text generation, looking forward to learning more about reinf
 How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram
 
 Projects:
+* [rulm, language model for Russian](https://github.com/IlyaGusev/rulm)
 * [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
 * [aika, amateur level chess engine](https://github.com/IlyaGusev/aika)
 * [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
