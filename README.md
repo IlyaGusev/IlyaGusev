@@ -4,7 +4,7 @@ I am interested in text generation, looking forward to learning more about reinf
 
 How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram.
 
-My Telegram channel: [@senior_augur](https://t.me/senior_augur)
+My Telegram channel: [@senior_augur](https://t.me/senior_augur).
 
 Projects:
 * [rulm, language models for Russian](https://github.com/IlyaGusev/rulm)
