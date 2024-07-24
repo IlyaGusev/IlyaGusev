@@ -41,5 +41,6 @@ Papers:
 Links:
 * Google Scholar: [link](https://scholar.google.com/citations?user=1tSFoVQAAAAJ&hl=ru)
 * Orchid ID: [0000-0002-8930-729X](https://orcid.org/0000-0002-8930-729X)
-* Donate (not from Russia): [link](https://www.paypal.com/donate/?hosted_button_id=PGFLNZYQWU5MS)
+* Donat (from Russia): [link](https://pay.cloudtips.ru/p/ea94d893)
+* Donate (not from Russia): [link](https://ko-fi.com/ilyagusev)
 
