@@ -7,7 +7,7 @@ How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram.
 My Telegram channel: [@senior_augur](https://t.me/senior_augur).
 
 Projects:
-* [ping_pong_bench, benchmark for role-playing LLMs](https://github.com/IlyaGusev/ping_pong_bench)
+* [pingpong, benchmark for role-playing LLMs](https://github.com/IlyaGusev/ping_pong_bench)
 * [saiga_bot, Telegram bot supporting different LLMs](https://github.com/IlyaGusev/saiga_bot)
 * [saiga, training code for Saiga language models](https://github.com/IlyaGusev/saiga)
 * [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
