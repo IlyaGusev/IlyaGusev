@@ -32,6 +32,7 @@ Articles:
 * [habr, Как научить свою нейросеть генерировать стихи](https://habr.com/ru/post/334046/)
 
 Papers:
+* [PingPong: A Benchmark for Role-Playing Language Models with User Emulation and Multi-Model Evaluation](https://arxiv.org/abs/2409.06820), [repo](https://github.com/IlyaGusev/ping_pong_bench)
 * [Russian Texts Detoxification with Levenshtein Editing](https://arxiv.org/abs/2204.13638), [repo](https://github.com/IlyaGusev/rudetox)
 * [HeadlineCause: A Dataset of News Headlines for Detecting Causalities](https://arxiv.org/abs/2108.12626), [repo](https://github.com/IlyaGusev/HeadlineCause)
 * [Russian News Clustering and Headline Selection Shared Task](https://arxiv.org/abs/2105.00981), [repo](https://github.com/dialogue-evaluation/Russian-News-Clustering-and-Headline-Generation)
