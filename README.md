@@ -1,6 +1,6 @@
 Hi! My name is Ilya Gusev.
 
-I am interested in text generation, looking forward to learning more about reinforcement learning, text-to-speech, and other fascinating things. If you need help with any of my projects or you would like to collaborate, do not hesitate to contact me.
+I am interested in everything around language models and agents. If you need help with any of my projects or you would like to collaborate, do not hesitate to contact me.
 
 How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram.
 
@@ -8,11 +8,12 @@ My Telegram channel: [@senior_augur](https://t.me/senior_augur).
 
 Projects:
 * [holosophos, multi-agent system for writing papers](https://github.com/IlyaGusev/holosophos)
+  [academia_mcp, MCP server with tools for scientific research](https://github.com/IlyaGusev/academia_mcp)
 * [pingpong, benchmark for role-playing LLMs](https://github.com/IlyaGusev/ping_pong_bench)
 * [saiga_bot, Telegram bot supporting different LLMs](https://github.com/IlyaGusev/saiga_bot)
 * [saiga, training code for Saiga language models](https://github.com/IlyaGusev/saiga)
-* [purano, news clustering system in Python](https://github.com/IlyaGusev/purano)
-* [aika, amateur level chess engine](https://github.com/IlyaGusev/aika)
+* [memetron3000, language models for memes generation](github.com/IlyaGusev/memetron3000)
+* [aika, amateur-level chess engine in C++](https://github.com/IlyaGusev/aika)
 * [tgcontest, news clustering system in C++](https://github.com/IlyaGusev/tgcontest)
 * [summarus, models for abstractive and extractive summarization](https://github.com/IlyaGusev/summarus)
 * [rnnmorph, morphological analyzer for Russian](https://github.com/IlyaGusev/rnnmorph)
@@ -20,6 +21,7 @@ Projects:
 * [rupo, library for analysis and generation of poems in Russian](https://github.com/IlyaGusev/rupo)
 
 Articles:
+* [substack, How I Taught AI to Make Memes](https://senioraugur.substack.com/p/how-i-taught-ai-to-make-memes)
 * [habr, О «раздутом пузыре» нейросетей](https://habr.com/ru/post/718996/)
 * [notion, Yet another language model?](https://ilyagusev.notion.site/Yet-another-language-model-3309a42bcea2418cbff11e7764452ae2)
 * [medium, Poems, Flowers, and Dragons at EMNLP 2022](https://towardsdatascience.com/poems-flowers-and-dragons-at-emnlp-2022-e83dbb0e91db)
