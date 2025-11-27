@@ -8,7 +8,7 @@ My Telegram channel: [@senior_augur](https://t.me/senior_augur).
 
 Projects:
 * [holosophos, multi-agent system for writing papers](https://github.com/IlyaGusev/holosophos)
-  [academia_mcp, MCP server with tools for scientific research](https://github.com/IlyaGusev/academia_mcp)
+* [academia_mcp, MCP server with tools for scientific research](https://github.com/IlyaGusev/academia_mcp)
 * [pingpong, benchmark for role-playing LLMs](https://github.com/IlyaGusev/ping_pong_bench)
 * [saiga_bot, Telegram bot supporting different LLMs](https://github.com/IlyaGusev/saiga_bot)
 * [saiga, training code for Saiga language models](https://github.com/IlyaGusev/saiga)
