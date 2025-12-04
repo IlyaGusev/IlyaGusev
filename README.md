@@ -6,6 +6,8 @@ How to reach me: [@YallenGusev](https://t.me/YallenGusev) at Telegram.
 
 My Telegram channel: [@senior_augur](https://t.me/senior_augur).
 
+Website: [ilyagusev.dev](https://ilyagusev.dev/)
+
 Projects:
 * [holosophos, multi-agent system for writing papers](https://github.com/IlyaGusev/holosophos)
 * [codearkt, CodeAct-based agentic framework](https://github.com/IlyaGusev/codearkt)
