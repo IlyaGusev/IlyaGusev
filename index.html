@@ -1,395 +1,1035 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$ ilya.gusev --info</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:ui-monospace,'SF Mono','Roboto Mono','Menlo','Monaco','Cascadia Mono','Courier New',monospace;line-height:1.6;color:#00ff41;background:#0a0a0a;max-width:900px;margin:0 auto;padding:2rem 1.5rem}
-::selection{background:#00ff41;color:#0a0a0a}
-header{margin-bottom:3rem;border:1px solid #1a1a1a;padding:1.5rem;background:#050505;box-shadow:0 0 20px rgba(0,255,65,0.1)}
-h1{font-size:1.8rem;font-weight:400;margin-bottom:0.5rem;color:#00ff41;text-shadow:0 0 10px rgba(0,255,65,0.5)}
-h1:before{content:'> ';color:#00ff41;opacity:0.7}
-.tagline{font-size:1rem;color:#aaa;margin-bottom:1rem}
-.tagline:before{content:'$ ';color:#00ff41}
-.contact{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:1rem;font-size:0.9rem;color:#aaa}
-.contact a{color:#00d4ff;text-decoration:none;transition:all 0.2s;text-shadow:0 0 5px rgba(0,212,255,0.3)}
-.contact a:hover{color:#00ff41;text-shadow:0 0 10px rgba(0,255,65,0.8)}
-.contact a:before{content:'[';color:#555}
-.contact a:after{content:']';color:#555}
-section{margin-bottom:2.5rem;border-left:2px solid #1a1a1a;padding-left:1.5rem}
-h2{font-size:1.3rem;font-weight:400;margin-bottom:1rem;color:#00ff41;margin-left:-1.5rem;padding-left:1rem;border-left:4px solid #00ff41}
-.interests{display:flex;flex-wrap:wrap;gap:0.8rem}
-.tag{background:#0f0f0f;padding:0.4rem 0.9rem;border:1px solid #1a1a1a;font-size:0.85rem;color:#999}
-.tag:before{content:'[ ';color:#555}
-.tag:after{content:' ]';color:#555}
-.timeline-item{margin-bottom:1.8rem;padding:1rem;background:#050505;border:1px solid #1a1a1a}
-.timeline-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.4rem;flex-wrap:wrap;gap:0.5rem}
-.timeline-prize{margin-top:0.5rem;font-size:0.95rem}
-.timeline-title{font-weight:400;font-size:1rem;color:#00ff41}
-.timeline-title:before{content:'→ ';color:#555}
-.timeline-date{color:#888;font-size:0.8rem}
-.timeline-date:before{content:'['}
-.timeline-date:after{content:']'}
-.timeline-org{color:#00d4ff;font-size:0.9rem;margin-bottom:0.3rem}
-.timeline-desc{color:#aaa;font-size:0.9rem;line-height:1.5}
-.prize{color:#00ff41;font-weight:400}
-.project-item{margin-bottom:1.5rem;padding:1rem;background:#050505;border:1px solid #1a1a1a}
-.project-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.3rem;flex-wrap:wrap;gap:0.5rem}
-.project-title{font-weight:400;color:#00ff41;font-size:1rem}
-.project-title:before{content:'$ ';color:#555}
-.project-year{color:#888;font-size:0.8rem}
-.project-year:before{content:'['}
-.project-year:after{content:']'}
-.project-stats-line{margin-top:0.5rem;font-size:0.9rem;color:#888}
-.project-desc{color:#aaa;font-size:0.9rem}
-.pub-item{margin-bottom:1.3rem;padding:1rem;padding-left:1.5rem;border-left:3px solid #1a1a1a;background:#050505}
-.pub-authors{font-size:0.85rem;color:#aaa;margin-bottom:0.2rem}
-.pub-authors strong{color:#00ff41;font-weight:400}
-.pub-title{font-weight:400;color:#00ff41;margin-bottom:0.2rem;font-size:0.95rem}
-.pub-venue{font-size:0.8rem;color:#888}
-a.link{color:#00d4ff;text-decoration:none;transition:all 0.2s;text-shadow:0 0 5px rgba(0,212,255,0.3)}
-a.link:hover{color:#00ff41;text-shadow:0 0 10px rgba(0,255,65,0.8)}
-nav{display:none}
-@media(min-width:1024px){
-nav{display:block;position:fixed;left:0;top:0;width:220px;height:100vh;background:#050505;border-right:2px solid #1a1a1a;padding:2rem 1.5rem;overflow-y:auto;z-index:100}
-nav h3{font-size:0.9rem;color:#00ff41;margin-bottom:1.5rem;font-weight:400;text-transform:uppercase;letter-spacing:0.05em}
-nav h3:before{content:'> ';opacity:0.7}
-nav ul{list-style:none}
-nav li{margin-bottom:0.8rem}
-nav a{color:#888;text-decoration:none;font-size:0.9rem;transition:all 0.2s;display:block;padding:0.3rem 0;border-left:2px solid transparent;padding-left:0.8rem}
-nav a:hover{color:#00ff41;border-left-color:#00ff41;padding-left:1rem}
-nav a.active{color:#00d4ff;border-left-color:#00d4ff}
-body{margin-left:240px}
-}
-@media(max-width:640px){
-h1{font-size:1.5rem}
-.contact{flex-direction:column;gap:0.8rem}
-.timeline-header{flex-direction:column;align-items:flex-start}
-}
-html{scroll-behavior:smooth}
-</style>
-</head>
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   $ ilya.gusev --info
+  </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<nav>
-<h3>Contents</h3>
-<ul>
-<li><a href="#demos">Demos</a></li>
-<li><a href="#interests">Interests</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Selected Projects</a></li>
-<li><a href="#competitions">Competitions</a></li>
-<li><a href="#publications">Selected Publications</a></li>
-<li><a href="#education">Education</a></li>
-</ul>
-</nav>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<header>
-<h1>Ilya Gusev</h1>
-<div class="tagline">Machine Learning Engineer</div>
-<div class="contact">
-<span>Amsterdam, Netherlands</span>
-<a href="mailto:phoenixilya@gmail.com">E-mail</a>
-<a href="https://github.com/IlyaGusev" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/ilya-gusev/" target="_blank">LinkedIn</a>
-<a href="https://t.me/senior_augur" target="_blank">Telegram channel</a>
-<a href="https://t.me/YallenGusev" target="_blank">Telegram DM</a>
-<a href="https://scholar.google.com/citations?user=1tSFoVQAAAAJ" target="_blank">Scholar</a>
-</div>
-</header>
+    /* Base styles */
+    body {
+      font-family: ui-monospace, 'SF Mono', 'Roboto Mono', 'Menlo', 'Monaco', 'Cascadia Mono', 'Courier New', monospace;
+      line-height: 1.6;
+      color: #00ff41;
+      background: #0a0a0a;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
 
-<section id="demos">
-<h2>Demos</h2>
+    ::selection {
+      background: #00ff41;
+      color: #0a0a0a;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://t.me/saiga_igusev_bot" class="link" target="_blank">Saiga Bot</a></span>
-</div>
-<div class="project-desc">Telegram bot with access to different LLMs via OpenRouter and Runpod.</div>
-</div>
+    /* Header */
+    header {
+      margin-bottom: 3rem;
+      border: 1px solid #1a1a1a;
+      padding: 1.5rem;
+      background: #050505;
+      box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="/aika" class="link">Aika</a></span>
-</div>
-<div class="project-desc">Amateur-level C++ chess engine with web GUI on top of lc0 board representation.</div>
-</div>
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: #00ff41;
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="/memetron3000" class="link">Memetron3000</a></span>
-</div>
-<div class="project-desc">Meme generation on top of Nano Banana Pro.</div>
-</div>
+    h1:before {
+      content: '> ';
+      color: #00ff41;
+      opacity: 0.7;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="/nlpsearch" class="link">NLP Search</a></span>
-</div>
-<div class="project-desc">Semantic search on top of Russian NLP Telegram chats and channels.</div>
-</div>
-</section>
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #00ff41;
+      margin-left: -1.5rem;
+      padding-left: 1rem;
+      border-left: 4px solid #00ff41;
+    }
 
-<section id="interests">
-<h2>Interests</h2>
-<div class="interests">
-<span class="tag">Natural Language Processing</span>
-<span class="tag">Text Summarization</span>
-<span class="tag">Language Models</span>
-<span class="tag">Multi-Agent Systems</span>
-<span class="tag">Chatbots</span>
-</div>
-</section>
+    .tagline {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
 
-<section id="experience">
-<h2>Experience</h2>
+    .tagline:before {
+      content: '$ ';
+      color: #00ff41;
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Senior Machine Learning Engineer</span>
-<span class="timeline-date">Aug 2022 — Present</span>
-</div>
-<div class="timeline-org">Booking.com, Amsterdam</div>
-<div class="timeline-desc">Worked on machine translation, semantic search for hotels, and LLM-based chatbots. Mainly in Python and Java.</div>
-</div>
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Senior Machine Learning Engineer</span>
-<span class="timeline-date">Mar 2018 — Jul 2022</span>
-</div>
-<div class="timeline-org">Yandex, Moscow</div>
-<div class="timeline-desc">Worked on many components of Yandex News, including news clustering, summarization, ranking, and recommendations. Python/MapReduce/SQL for prototyping and analytics, C++ for production-ready solutions.</div>
-</div>
+    .contact a {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: all 0.2s;
+      text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">University Teacher</span>
-<span class="timeline-date">Sep 2016 — Jun 2021</span>
-</div>
-<div class="timeline-org">Moscow Institute of Physics and Technology</div>
-<div class="timeline-desc">Taught Algorithms to 1st and 2nd-year undergraduates.</div>
-</div>
+    .contact a:hover {
+      color: #00ff41;
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Software Engineer</span>
-<span class="timeline-date">Mar 2016 — Mar 2018</span>
-</div>
-<div class="timeline-org">ABBYY, Moscow</div>
-<div class="timeline-desc">Worked in the LingvoLive backend team, improving the search of cards with translations of words. Then worked in the linguistics department on tools for machine learning.</div>
-</div>
-</section>
+    .contact a:before {
+      content: '[';
+      color: #555;
+    }
 
-<section id="projects">
-<h2>Selected Projects</h2>
+    .contact a:after {
+      content: ']';
+      color: #555;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/holosophos" class="link" target="_blank">Holosophos</a></span>
-<span class="project-year">2025</span>
-</div>
-<div class="project-desc">Multi-agent system for writing scientific papers with language models.</div>
-<div class="project-stats-line">⭐ 46</div>
-</div>
+    /* Sections */
+    section {
+      margin-bottom: 2.5rem;
+      border-left: 2px solid #1a1a1a;
+      padding-left: 1.5rem;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/codearkt" class="link" target="_blank">CodeArkt</a></span>
-<span class="project-year">2025</span>
-</div>
-<div class="project-desc">CodeAct-based agentic framework for autonomous task solving.</div>
-<div class="project-stats-line">⭐ 32</div>
-</div>
+    /* Interests */
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/academia_mcp" class="link" target="_blank">Academia MCP</a></span>
-<span class="project-year">2025</span>
-</div>
-<div class="project-desc">MCP server with tools for scientific research.</div>
-<div class="project-stats-line">⭐ 27</div>
-</div>
+    .tag {
+      background: #0f0f0f;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid #1a1a1a;
+      font-size: 0.85rem;
+      color: #999;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://huggingface.co/collections/IlyaGusev/saiga-6505d4ccc3d1e53166b636cd" class="link" target="_blank">Saiga</a></span>
-<span class="project-year">2024</span>
-</div>
-<div class="project-desc">Open datasets and language models for the Russian language. Complete training pipeline for instruction-tuned models.</div>
-<div class="project-stats-line">❤️ 500+ · ⬇️ 2M</div>
-</div>
+    .tag:before {
+      content: '[ ';
+      color: #555;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/ping_pong_bench" class="link" target="_blank">PingPong</a></span>
-<span class="project-year">2024</span>
-</div>
-<div class="project-desc">Benchmark for evaluating role-playing language models with user emulation.</div>
-<div class="project-stats-line">⭐ 112</div>
-</div>
+    .tag:after {
+      content: ' ]';
+      color: #555;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/summarus" class="link" target="_blank">Summarus</a></span>
-<span class="project-year">2021</span>
-</div>
-<div class="project-desc">Models for abstractive and extractive summarization of Russian texts.</div>
-<div class="project-stats-line">⭐ 174</div>
-</div>
+    /* Timeline items (Experience, Education, Competitions) */
+    .timeline-item {
+      margin-bottom: 1.8rem;
+      padding: 1rem;
+      background: #050505;
+      border: 1px solid #1a1a1a;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/rupo" class="link" target="_blank">RuPo</a></span>
-<span class="project-year">2017</span>
-</div>
-<div class="project-desc">Russian poetry analyzer and generator using neural networks.</div>
-<div class="project-stats-line">⭐ 177</div>
-</div>
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-<div class="project-item">
-<div class="project-header">
-<span class="project-title"><a href="https://github.com/IlyaGusev/rnnmorph" class="link" target="_blank">RnnMorph</a></span>
-<span class="project-year">2017</span>
-</div>
-<div class="project-desc">One of the first contextual morphological analyzers for the Russian language.</div>
-<div class="project-stats-line">⭐ 156</div>
-</div>
-</section>
+    .timeline-title {
+      font-weight: 400;
+      font-size: 1rem;
+      color: #00ff41;
+    }
 
-<section id="competitions">
-<h2>Competitions</h2>
+    .timeline-title:before {
+      content: '→ ';
+      color: #555;
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Chai Competition</span>
-<span class="timeline-date">Sep 2023 — Jan 2024</span>
-</div>
-<div class="timeline-desc">Fine-tuned LLMs for role-play conversations.</div>
-<div class="timeline-prize"><span class="prize">💰 $5k</span></div>
-</div>
+    .timeline-date {
+      color: #888;
+      font-size: 0.8rem;
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Telegram Channel Classification Contest</span>
-<span class="timeline-date">Jul 2021</span>
-</div>
-<div class="timeline-desc">Built a system for identifying language and category of Telegram channels. 1st place in Round 1 and 2nd place in Round 2.</div>
-<div class="timeline-prize"><span class="prize">💰 $19k</span></div>
-</div>
+    .timeline-date:before {
+      content: '[';
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Telegram News Aggregation Contest</span>
-<span class="timeline-date">Feb 2020</span>
-</div>
-<div class="timeline-desc">Built a news aggregation system in C++. 3rd place in Round 1 and 1st place in Round 2.</div>
-<div class="timeline-prize"><span class="prize">💰 $31k</span></div>
-</div>
-</section>
+    .timeline-date:after {
+      content: ']';
+    }
 
-<section id="publications">
-<h2>Selected Publications</h2>
+    .timeline-org {
+      color: #00d4ff;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
 
-<div class="pub-item">
-<div class="pub-title">HotelMatch-LLM: Joint Multi-Task Training of Small and Large Language Models for Efficient Multimodal Hotel Retrieval</div>
-<div class="pub-authors">Arian Askari, Emmanouil Stergiadis, <strong>Ilya Gusev</strong>, Moran Beladev</div>
-<div class="pub-venue">ACL 2025 · <a href="https://www.arxiv.org/abs/2506.07296" class="link" target="_blank">arxiv:2506.07296</a></div>
-</div>
+    .timeline-desc {
+      color: #aaa;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
 
-<div class="pub-item">
-<div class="pub-title">Speed Without Sacrifice: Fine-Tuning Language Models with Medusa and Knowledge Distillation in Travel Applications</div>
-<div class="pub-authors">Daniel Zagyva, Emmanouil Stergiadis, Laurens Van Der Maas, Aleksandra Dokic, Eran Fainman, <strong>Ilya Gusev</strong>, Moran Beladev</div>
-<div class="pub-venue">ACL 2025 · <a href="https://aclanthology.org/2025.acl-industry.48/" class="link" target="_blank">doi:10.18653/v1/2025.acl-industry.48</a></div>
-</div>
+    .timeline-prize {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
 
-<div class="pub-item">
-<div class="pub-title">PingPong: A Benchmark for Role-Playing Language Models with User Emulation and Multi-Model Evaluation</div>
-<div class="pub-authors"><strong>Ilya Gusev</strong></div>
-<div class="pub-venue"><a href="https://arxiv.org/abs/2409.06820" class="link" target="_blank">arxiv:2409.06820</a></div>
-</div>
+    .prize {
+      color: #00ff41;
+      font-weight: 400;
+    }
 
-<div class="pub-item">
-<div class="pub-title">Do not lose the message while paraphrasing: A study on content preserving style transfer</div>
-<div class="pub-authors">Nikolay Babakov, David Dale, <strong>Ilya Gusev</strong>, Irina Krotova, Alexander Panchenko</div>
-<div class="pub-venue">NLDB 2023 · <a href="https://arxiv.org/abs/2308.09055" class="link" target="_blank">arxiv:2308.09055</a></div>
-</div>
+    /* Project items */
+    .project-item {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #050505;
+      border: 1px solid #1a1a1a;
+    }
 
-<div class="pub-item">
-<div class="pub-title">HeadlineCause: A dataset of news headlines for detecting causalities</div>
-<div class="pub-authors"><strong>Ilya Gusev</strong>, Alexey Tikhonov</div>
-<div class="pub-venue">LREC 2021 · <a href="https://arxiv.org/abs/2108.12626" class="link" target="_blank">arxiv:2108.12626</a></div>
-</div>
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-<div class="pub-item">
-<div class="pub-title">Dataset for Automatic Summarization of Russian News</div>
-<div class="pub-authors"><strong>Ilya Gusev</strong></div>
-<div class="pub-venue">AINL 2020 · <a href="https://arxiv.org/abs/2006.11063" class="link" target="_blank">arxiv:2006.11063</a></div>
-</div>
+    .project-title {
+      font-weight: 400;
+      color: #00ff41;
+      font-size: 1rem;
+    }
 
-<div class="pub-item">
-<div class="pub-title">Improving part-of-speech tagging via multi-task learning and character-level word representations</div>
-<div class="pub-authors">Daniil Anastasyev, <strong>Ilya Gusev</strong>, Evgenii Indenbom</div>
-<div class="pub-venue">Dialogue 2018 · <a href="https://arxiv.org/abs/1807.00818" class="link" target="_blank">arxiv:1807.00818</a></div>
-</div>
-</section>
+    .project-title:before {
+      content: '$ ';
+      color: #555;
+    }
 
-<section id="education">
-<h2>Education</h2>
+    .project-year {
+      color: #888;
+      font-size: 0.8rem;
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Master in Computer Science</span>
-<span class="timeline-date">2018</span>
-</div>
-<div class="timeline-org">Moscow Institute of Physics and Technology</div>
-</div>
+    .project-year:before {
+      content: '[';
+    }
 
-<div class="timeline-item">
-<div class="timeline-header">
-<span class="timeline-title">Bachelor in Math and Physics</span>
-<span class="timeline-date">2016</span>
-</div>
-<div class="timeline-org">Moscow Institute of Physics and Technology</div>
-</div>
-</section>
+    .project-year:after {
+      content: ']';
+    }
 
-<section style="text-align:center;margin-top:3rem;padding:2rem;border:1px solid #1a1a1a;background:#050505">
-<h2 style="margin-bottom:1.5rem">Website QR Code</h2>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://ilyagusev.dev/" alt="QR Code for ilyagusev.dev" style="border:4px solid #00ff41;padding:1rem;background:white">
-<div style="margin-top:1rem;color:#aaa;font-size:0.9rem">Scan to visit ilyagusev.dev</div>
-</section>
+    .project-desc {
+      color: #aaa;
+      font-size: 0.9rem;
+    }
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav a');
+    .project-stats-line {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
 
-  function highlightNav() {
-    let current = '';
+    /* Publications */
+    .pub-item {
+      margin-bottom: 1.3rem;
+      padding: 1rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid #1a1a1a;
+      background: #050505;
+    }
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - 200) {
-        current = section.getAttribute('id');
+    .pub-title {
+      font-weight: 400;
+      color: #00ff41;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .pub-authors {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 0.2rem;
+    }
+
+    .pub-authors strong {
+      color: #00ff41;
+      font-weight: 400;
+    }
+
+    .pub-venue {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    /* Links */
+    a.link {
+      color: #00d4ff;
+      text-decoration: none;
+      transition: all 0.2s;
+      text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+    }
+
+    a.link:hover {
+      color: #00ff41;
+      text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    }
+
+    /* QR Code section */
+    .qr-section {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      border: 1px solid #1a1a1a;
+      background: #050505;
+    }
+
+    .qr-section h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .qr-section img {
+      border: 4px solid #00ff41;
+      padding: 1rem;
+      background: white;
+    }
+
+    .qr-section .qr-caption {
+      margin-top: 1rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    /* Navigation */
+    nav {
+      display: none;
+    }
+
+    nav h3 {
+      font-size: 0.9rem;
+      color: #00ff41;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    nav h3:before {
+      content: '> ';
+      opacity: 0.7;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav li {
+      margin-bottom: 0.8rem;
+    }
+
+    nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      display: block;
+      padding: 0.3rem 0;
+      border-left: 2px solid transparent;
+      padding-left: 0.8rem;
+    }
+
+    nav a:hover {
+      color: #00ff41;
+      border-left-color: #00ff41;
+      padding-left: 1rem;
+    }
+
+    nav a.active {
+      color: #00d4ff;
+      border-left-color: #00d4ff;
+    }
+
+    /* Media queries */
+    @media (min-width: 1024px) {
+      nav {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 220px;
+        height: 100vh;
+        background: #050505;
+        border-right: 2px solid #1a1a1a;
+        padding: 2rem 1.5rem;
+        overflow-y: auto;
+        z-index: 100;
       }
-    });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
+      body {
+        margin-left: 240px;
       }
-    });
-  }
+    }
 
-  window.addEventListener('scroll', highlightNav);
-  highlightNav();
-});
-</script>
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.5rem;
+      }
 
-</body>
+      .contact {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+ </head>
+ <body>
+  <nav>
+   <h3>
+    Contents
+   </h3>
+   <ul>
+    <li>
+     <a href="#demos">
+      Demos
+     </a>
+    </li>
+    <li>
+     <a href="#interests">
+      Interests
+     </a>
+    </li>
+    <li>
+     <a href="#experience">
+      Experience
+     </a>
+    </li>
+    <li>
+     <a href="#projects">
+      Selected Projects
+     </a>
+    </li>
+    <li>
+     <a href="#competitions">
+      Competitions
+     </a>
+    </li>
+    <li>
+     <a href="#publications">
+      Selected Publications
+     </a>
+    </li>
+    <li>
+     <a href="#education">
+      Education
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <header>
+   <h1>
+    Ilya Gusev
+   </h1>
+   <div class="tagline">
+    Machine Learning Engineer
+   </div>
+   <div class="contact">
+    <span>
+     Amsterdam, Netherlands
+    </span>
+    <a href="mailto:phoenixilya@gmail.com">
+     E-mail
+    </a>
+    <a href="https://github.com/IlyaGusev" target="_blank">
+     GitHub
+    </a>
+    <a href="https://www.linkedin.com/in/ilya-gusev/" target="_blank">
+     LinkedIn
+    </a>
+    <a href="https://t.me/senior_augur" target="_blank">
+     Telegram channel
+    </a>
+    <a href="https://t.me/YallenGusev" target="_blank">
+     Telegram DM
+    </a>
+    <a href="https://scholar.google.com/citations?user=1tSFoVQAAAAJ" target="_blank">
+     Scholar
+    </a>
+   </div>
+  </header>
+  <section id="demos">
+   <h2>
+    Demos
+   </h2>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://t.me/saiga_igusev_bot" target="_blank">
+       Saiga Bot
+      </a>
+     </span>
+    </div>
+    <div class="project-desc">
+     Telegram bot with access to different LLMs via OpenRouter and Runpod.
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="/aika">
+       Aika
+      </a>
+     </span>
+    </div>
+    <div class="project-desc">
+     Amateur-level C++ chess engine with web GUI on top of lc0 board representation.
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="/memetron3000">
+       Memetron3000
+      </a>
+     </span>
+    </div>
+    <div class="project-desc">
+     Meme generation on top of Nano Banana Pro.
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="/nlpsearch">
+       NLP Search
+      </a>
+     </span>
+    </div>
+    <div class="project-desc">
+     Semantic search on top of Russian NLP Telegram chats and channels.
+    </div>
+   </div>
+  </section>
+  <section id="interests">
+   <h2>
+    Interests
+   </h2>
+   <div class="interests">
+    <span class="tag">
+     Natural Language Processing
+    </span>
+    <span class="tag">
+     Text Summarization
+    </span>
+    <span class="tag">
+     Language Models
+    </span>
+    <span class="tag">
+     Multi-Agent Systems
+    </span>
+    <span class="tag">
+     Chatbots
+    </span>
+   </div>
+  </section>
+  <section id="experience">
+   <h2>
+    Experience
+   </h2>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Senior Machine Learning Engineer
+     </span>
+     <span class="timeline-date">
+      Aug 2022 — Present
+     </span>
+    </div>
+    <div class="timeline-org">
+     Booking.com, Amsterdam
+    </div>
+    <div class="timeline-desc">
+     Worked on machine translation, semantic search for hotels, and LLM-based chatbots. Mainly in Python and Java.
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Senior Machine Learning Engineer
+     </span>
+     <span class="timeline-date">
+      Mar 2018 — Jul 2022
+     </span>
+    </div>
+    <div class="timeline-org">
+     Yandex, Moscow
+    </div>
+    <div class="timeline-desc">
+     Worked on many components of Yandex News, including news clustering, summarization, ranking, and recommendations. Python/MapReduce/SQL for prototyping and analytics, C++ for production-ready solutions.
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      University Teacher
+     </span>
+     <span class="timeline-date">
+      Sep 2016 — Jun 2021
+     </span>
+    </div>
+    <div class="timeline-org">
+     Moscow Institute of Physics and Technology
+    </div>
+    <div class="timeline-desc">
+     Taught Algorithms to 1st and 2nd-year undergraduates.
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Software Engineer
+     </span>
+     <span class="timeline-date">
+      Mar 2016 — Mar 2018
+     </span>
+    </div>
+    <div class="timeline-org">
+     ABBYY, Moscow
+    </div>
+    <div class="timeline-desc">
+     Worked in the LingvoLive backend team, improving the search of cards with translations of words. Then worked in the linguistics department on tools for machine learning.
+    </div>
+   </div>
+  </section>
+  <section id="projects">
+   <h2>
+    Selected Projects
+   </h2>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/holosophos" target="_blank">
+       Holosophos
+      </a>
+     </span>
+     <span class="project-year">
+      2025
+     </span>
+    </div>
+    <div class="project-desc">
+     Multi-agent system for writing scientific papers with language models.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 46
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/codearkt" target="_blank">
+       CodeArkt
+      </a>
+     </span>
+     <span class="project-year">
+      2025
+     </span>
+    </div>
+    <div class="project-desc">
+     CodeAct-based agentic framework for autonomous task solving.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 32
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/academia_mcp" target="_blank">
+       Academia MCP
+      </a>
+     </span>
+     <span class="project-year">
+      2025
+     </span>
+    </div>
+    <div class="project-desc">
+     MCP server with tools for scientific research.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 27
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://huggingface.co/collections/IlyaGusev/saiga-6505d4ccc3d1e53166b636cd" target="_blank">
+       Saiga
+      </a>
+     </span>
+     <span class="project-year">
+      2024
+     </span>
+    </div>
+    <div class="project-desc">
+     Open datasets and language models for the Russian language. Complete training pipeline for instruction-tuned models.
+    </div>
+    <div class="project-stats-line">
+     ❤️ 500+ · ⬇️ 2M
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/ping_pong_bench" target="_blank">
+       PingPong
+      </a>
+     </span>
+     <span class="project-year">
+      2024
+     </span>
+    </div>
+    <div class="project-desc">
+     Benchmark for evaluating role-playing language models with user emulation.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 112
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/summarus" target="_blank">
+       Summarus
+      </a>
+     </span>
+     <span class="project-year">
+      2021
+     </span>
+    </div>
+    <div class="project-desc">
+     Models for abstractive and extractive summarization of Russian texts.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 174
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/rupo" target="_blank">
+       RuPo
+      </a>
+     </span>
+     <span class="project-year">
+      2017
+     </span>
+    </div>
+    <div class="project-desc">
+     Russian poetry analyzer and generator using neural networks.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 177
+    </div>
+   </div>
+   <div class="project-item">
+    <div class="project-header">
+     <span class="project-title">
+      <a class="link" href="https://github.com/IlyaGusev/rnnmorph" target="_blank">
+       RnnMorph
+      </a>
+     </span>
+     <span class="project-year">
+      2017
+     </span>
+    </div>
+    <div class="project-desc">
+     One of the first contextual morphological analyzers for the Russian language.
+    </div>
+    <div class="project-stats-line">
+     ⭐ 156
+    </div>
+   </div>
+  </section>
+  <section id="competitions">
+   <h2>
+    Competitions
+   </h2>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Chai Competition
+     </span>
+     <span class="timeline-date">
+      Sep 2023 — Jan 2024
+     </span>
+    </div>
+    <div class="timeline-desc">
+     Fine-tuned LLMs for role-play conversations.
+    </div>
+    <div class="timeline-prize">
+     <span class="prize">
+      💰 $5k
+     </span>
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Telegram Channel Classification Contest
+     </span>
+     <span class="timeline-date">
+      Jul 2021
+     </span>
+    </div>
+    <div class="timeline-desc">
+     Built a system for identifying language and category of Telegram channels. 1st place in Round 1 and 2nd place in Round 2.
+    </div>
+    <div class="timeline-prize">
+     <span class="prize">
+      💰 $19k
+     </span>
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Telegram News Aggregation Contest
+     </span>
+     <span class="timeline-date">
+      Feb 2020
+     </span>
+    </div>
+    <div class="timeline-desc">
+     Built a news aggregation system in C++. 3rd place in Round 1 and 1st place in Round 2.
+    </div>
+    <div class="timeline-prize">
+     <span class="prize">
+      💰 $31k
+     </span>
+    </div>
+   </div>
+  </section>
+  <section id="publications">
+   <h2>
+    Selected Publications
+   </h2>
+   <div class="pub-item">
+    <div class="pub-title">
+     HotelMatch-LLM: Joint Multi-Task Training of Small and Large Language Models for Efficient Multimodal Hotel Retrieval
+    </div>
+    <div class="pub-authors">
+     Arian Askari, Emmanouil Stergiadis,
+     <strong>
+      Ilya Gusev
+     </strong>
+     , Moran Beladev
+    </div>
+    <div class="pub-venue">
+     ACL 2025 ·
+     <a class="link" href="https://www.arxiv.org/abs/2506.07296" target="_blank">
+      arxiv:2506.07296
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     Speed Without Sacrifice: Fine-Tuning Language Models with Medusa and Knowledge Distillation in Travel Applications
+    </div>
+    <div class="pub-authors">
+     Daniel Zagyva, Emmanouil Stergiadis, Laurens Van Der Maas, Aleksandra Dokic, Eran Fainman,
+     <strong>
+      Ilya Gusev
+     </strong>
+     , Moran Beladev
+    </div>
+    <div class="pub-venue">
+     ACL 2025 ·
+     <a class="link" href="https://aclanthology.org/2025.acl-industry.48/" target="_blank">
+      doi:10.18653/v1/2025.acl-industry.48
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     PingPong: A Benchmark for Role-Playing Language Models with User Emulation and Multi-Model Evaluation
+    </div>
+    <div class="pub-authors">
+     <strong>
+      Ilya Gusev
+     </strong>
+    </div>
+    <div class="pub-venue">
+     <a class="link" href="https://arxiv.org/abs/2409.06820" target="_blank">
+      arxiv:2409.06820
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     Do not lose the message while paraphrasing: A study on content preserving style transfer
+    </div>
+    <div class="pub-authors">
+     Nikolay Babakov, David Dale,
+     <strong>
+      Ilya Gusev
+     </strong>
+     , Irina Krotova, Alexander Panchenko
+    </div>
+    <div class="pub-venue">
+     NLDB 2023 ·
+     <a class="link" href="https://arxiv.org/abs/2308.09055" target="_blank">
+      arxiv:2308.09055
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     HeadlineCause: A dataset of news headlines for detecting causalities
+    </div>
+    <div class="pub-authors">
+     <strong>
+      Ilya Gusev
+     </strong>
+     , Alexey Tikhonov
+    </div>
+    <div class="pub-venue">
+     LREC 2021 ·
+     <a class="link" href="https://arxiv.org/abs/2108.12626" target="_blank">
+      arxiv:2108.12626
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     Dataset for Automatic Summarization of Russian News
+    </div>
+    <div class="pub-authors">
+     <strong>
+      Ilya Gusev
+     </strong>
+    </div>
+    <div class="pub-venue">
+     AINL 2020 ·
+     <a class="link" href="https://arxiv.org/abs/2006.11063" target="_blank">
+      arxiv:2006.11063
+     </a>
+    </div>
+   </div>
+   <div class="pub-item">
+    <div class="pub-title">
+     Improving part-of-speech tagging via multi-task learning and character-level word representations
+    </div>
+    <div class="pub-authors">
+     Daniil Anastasyev,
+     <strong>
+      Ilya Gusev
+     </strong>
+     , Evgenii Indenbom
+    </div>
+    <div class="pub-venue">
+     Dialogue 2018 ·
+     <a class="link" href="https://arxiv.org/abs/1807.00818" target="_blank">
+      arxiv:1807.00818
+     </a>
+    </div>
+   </div>
+  </section>
+  <section id="education">
+   <h2>
+    Education
+   </h2>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Master in Computer Science
+     </span>
+     <span class="timeline-date">
+      2018
+     </span>
+    </div>
+    <div class="timeline-org">
+     Moscow Institute of Physics and Technology
+    </div>
+   </div>
+   <div class="timeline-item">
+    <div class="timeline-header">
+     <span class="timeline-title">
+      Bachelor in Math and Physics
+     </span>
+     <span class="timeline-date">
+      2016
+     </span>
+    </div>
+    <div class="timeline-org">
+     Moscow Institute of Physics and Technology
+    </div>
+   </div>
+  </section>
+  <section class="qr-section">
+   <h2>
+    Website QR Code
+   </h2>
+   <img alt="QR Code for ilyagusev.dev" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=https://ilyagusev.dev/"/>
+   <div class="qr-caption">
+    Scan to visit ilyagusev.dev
+   </div>
+  </section>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function highlightNav() {
+      let current = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+  });
+  </script>
+ </body>
 </html>
