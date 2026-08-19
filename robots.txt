@@ -1,0 +1,7 @@
+# robots.txt for ilyagusev.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ilyagusev.dev/sitemap.xml
